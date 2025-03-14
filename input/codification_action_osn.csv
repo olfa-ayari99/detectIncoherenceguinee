@@ -1,0 +1,245 @@
+label_action;tag_action;tag_operator;crm_case_subject;crm_case_category;crm_case_reason;active;Creation Case Auto
+Contrat Mobile - Envoyer les paramètres APN;crt_n2_opts_send_all_setting;SONATEL;Assistance;ASSISTANCE-DATA;ASS-DAT-PARAMETRAGE INTERNET MOBILE;true;true
+Contrat Mobile - Action de génération du code de la carte suite soucis carte male grattée;cons_rech_n2_opts_voucher_code;SONATEL;Réclamation;ASSISTANCE-CREDIT;ASS-CRE-CODE ILLISIBLE;true;true
+Contrat Mobile - Action de vérification de carte de recharge;cons_rech_n2_opts_voucher_carte;SONATEL;Réclamation;ASSISTANCE-CREDIT;ASS-CRE-CODE ILLISIBLE;true;true
+Orange Money - Réinitialisation Code Secret OM;om_n2_otps_RESTPIN;SONATEL;Gestion;GESTION-OM;GEST-OM-DEBLOCAGE / REINITIALISATION;true;true
+Orange Money - Action de Réactivation du compte Orange Money;om_n2_otps_RESUME;SONATEL;Assistance;GESTION-OM;GEST-OM-RETABLISSEMENT COMPTE;true;true
+Orange Money - Action de Déblocage et Réinitialisation Code Secret OM;om_n2_otps_UNBARE_RESTPIN;SONATEL;Gestion;GESTION-OM;GEST-OM-DEBLOCAGE / REINITIALISATION;true;true
+Orange Money - Action de Déblocage Code Secret OM;om_n2_otps_UNBAR;SONATEL;Gestion;GESTION-OM;GEST-OM-DEBLOCAGE / REINITIALISATION;true;true
+Orange Money - Action de Suspension de compte Orange Money;om_n2_otps_SUSPEND;SONATEL;Assistance;ASSISTANCE-SVA;GEST-OM-SUSPENSION COMPTE;true;true
+Service 3G;crt_n2_opts_3G_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-SER-ACTIVATION SERVICE;true;true
+Messagerie Vocale(Francais);crt_n2_opts_BAOC_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-PERSONALISATION MESSAGERIE VOCALE;true;true
+Ring Back Tone;crt_n2_opts_CRBT_ajout;SONATEL;;;;true;true
+Mes Numéros Préférés Orange;crt_n2_opts_FnF_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION NUMEROS ILLIMITES;true;true
+Package GPRS/MMS/EDGE;crt_n2_opts_GPRS_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Presentation du Numero;crt_n2_opts_IDAP_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Appel International;crt_n2_opts_IDD_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+IDENTIF-Suspension partielle;crt_n2_opts_ISUSPP_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+IDENTIF-Suspension Totale;crt_n2_opts_ISUSPT_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Service 4G;crt_n2_opts_LTE_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Option sans frontières;crt_n2_opts_MON_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Messagerie Vocale(Wolof);crt_n2_opts_MSGVW_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-PERSONALISATION MESSAGERIE VOCALE;true;true
+Pay4Me;crt_n2_opts_Pay4Me_ajout;SONATEL;;;;true;true
+Liste Rouge;crt_n2_opts_RED_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Renvoi si inaccessible;crt_n2_opts_RNVI_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Renvoi si non réponse;crt_n2_opts_RNVR_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Regional And YieldZone;crt_n2_opts_RYZ_ajout;SONATEL;;;;true;true
+Regional Zone;crt_n2_opts_RZ_ajout;SONATEL;;;;true;true
+Signal d'appel;crt_n2_opts_SIGN_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Suspension Partielle;crt_n2_opts_SUSPP_ajout;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspension Totale;crt_n2_opts_SUSPT_ajout;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspension Fraude;crt_n2_opts_SUSPB_ajout;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspension Arnaque;crt_n2_opts_SUSTA_ajout;SONATEL;;;;true;true
+Suspension Routage Annonce;crt_n2_opts_SUSPRA_ajout;SONATEL;;;;true;true
+VISIOPHONIE;crt_n2_opts_VISIO_ajout;SONATEL;;;;true;true
+Wax ba tass;crt_n2_opts_WBT_ajout;SONATEL;;;;true;true
+YieldZone;crt_n2_opts_YZ_ajout;SONATEL;;;;true;true
+Service 3G;crt_n2_opts_3G_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Messagerie Vocale(Francais);crt_n2_opts_BAOC_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Ring Back Tone;crt_n2_opts_CRBT_suppression;SONATEL;;;;true;true
+Mes Numéros Préférés Orange;crt_n2_opts_FnF_suppression;SONATEL;;;;true;true
+Package GPRS/MMS/EDGE;crt_n2_opts_GPRS_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Presentation du Numero;crt_n2_opts_IDAP_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Appel International;crt_n2_opts_IDD_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+IDENTIF-Suspension partielle;crt_n2_opts_ISUSPP_suppression;SONATEL;;;;true;true
+IDENTIF-Suspension Totale;crt_n2_opts_ISUSPT_suppression;SONATEL;;;;true;true
+Service 4G;crt_n2_opts_LTE_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Option sans frontières;crt_n2_opts_MON_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Messagerie Vocale(Wolof);crt_n2_opts_MSGVW_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Mobile  Social Live;crt_n2_opts_MSL_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Pay4Me;crt_n2_opts_Pay4Me_suppression;SONATEL;;;;true;true
+Liste Rouge;crt_n2_opts_RED_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Renvoi si inaccessible;crt_n2_opts_RNVI_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Renvoi si non réponse;crt_n2_opts_RNVR_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Regional And YieldZone;crt_n2_opts_RYZ_suppression;SONATEL;;;;true;true
+Regional Zone;crt_n2_opts_RZ_suppression;SONATEL;;;;true;true
+Signal d'appel;crt_n2_opts_SIGN_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Messagerie ecrite-Destination-mobile;crt_n2_opts_SMDM_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Messagerie ecrite-Origine mobile;crt_n2_opts_SMMO_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Suspension Buster;crt_n2_opts_SUSPB_suppression;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspension Partielle;crt_n2_opts_SUSPP_suppression;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspension Totale;crt_n2_opts_SUSPT_suppression;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspension Arnaque;crt_n2_opts_SUSTA_suppression;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspension Routage Annonce;crt_n2_opts_SUSPRA_suppression;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+VISIOPHONIE;crt_n2_opts_VISIO_suppression;SONATEL;;;;true;true
+Wax ba tass;crt_n2_opts_WBT_suppression;SONATEL;;;;true;true
+YieldZone;crt_n2_opts_YZ_suppression;SONATEL;;;;true;true
+Service 3G;crt_n2_opts_SVC_3G_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Appel Video;crt_n2_opts_SVC_3GVISIO_activer;SONATEL;;;;true;true
+Service Anti Bill Shock (ABS);crt_n2_opts_SVC_ABS_activer;SONATEL;;;;true;true
+Service Basic Data;crt_n2_opts_SVC_BDATA_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Telephonie de base;crt_n2_opts_SVC_BTEL_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Renvoi si ligne occupee;crt_n2_opts_SVC_CFBUSY_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Renvoi si non accessible;crt_n2_opts_SVC_CFNREACH_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Renvoi si pas de reponse;crt_n2_opts_SVC_CFNREPLY_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Renvoi d'appel inconditionnel;crt_n2_opts_SVC_CFUNCOND_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Appel en attente;crt_n2_opts_SVC_CHS_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+CLIP - Presentation du numero;crt_n2_opts_SVC_CLIP_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+CLIR - Liste rouge;crt_n2_opts_SVC_CLIR_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+RingBack Tone;crt_n2_opts_SVC_CRBT_activer;SONATEL;;;;true;true
+Transfert d'appel;crt_n2_opts_SVC_CTS_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Appel en attente;crt_n2_opts_SVC_CWS_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+GPRS, inclus Internet + Wap + MMS;crt_n2_opts_SVC_GPRS_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Service LTE (4G);crt_n2_opts_SVC_LTE_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Conference;crt_n2_opts_SVC_MPTY_activer;SONATEL;;;;true;true
+Restriction operateur appels entrants;crt_n2_opts_SVC_OPER_BARRIN_activer;SONATEL;Gestion;GEST-RECOUVREMENT;GEST-REC-SUSPENSION SUITE IMPAYES;true;true
+Restriction operateur appels sortants;crt_n2_opts_SVC_OPER_BARROUT_activer;SONATEL;Gestion;GEST-RECOUVREMENT;GEST-REC-SUSPENSION SUITE IMPAYES;true;true
+Restriction Roaming;crt_n2_opts_SVC_ROAMING_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Service SMS;crt_n2_opts_SVC_SMS_MOMT_activer;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Restriction appels sortants;crt_n2_opts_SVC_USER_BAOC_activer;SONATEL;;;;true;true
+Restriction appels sortants vers l'international (IDD);crt_n2_opts_SVC_USER_BOICC_activer;SONATEL;;;;true;true
+Messagerie vocale;crt_n2_opts_SVC_VMS_activer;SONATEL;Gestion;GEST-ACTIVATION;GEST-ACT-BOITE VOCALE  FRANCAISE;true;true
+Service 3G;crt_n2_opts_SVC_3G_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Appel Video;crt_n2_opts_SVC_3GVISIO_desactiver;SONATEL;;;;true;true
+Service Anti Bill Shock (ABS);crt_n2_opts_SVC_ABS_desactiver;SONATEL;;;;true;true
+Service Basic Data;crt_n2_opts_SVC_BDATA_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Service Basic Fax;crt_n2_opts_SVC_BFAX_desactiver;SONATEL;;;;true;true
+Service Blackberry;crt_n2_opts_SVC_BLBE_desactiver;SONATEL;;;;true;true
+Telephonie de base;crt_n2_opts_SVC_BTEL_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Renvoi si ligne occupee;crt_n2_opts_SVC_CFBUSY_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Renvoi si non accessible;crt_n2_opts_SVC_CFNREACH_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Renvoi si pas de reponse;crt_n2_opts_SVC_CFNREPLY_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Renvoi d'appel inconditionnel;crt_n2_opts_SVC_CFUNCOND_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Signal d'appel;crt_n2_opts_SVC_CHS_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+CLIP - Presentation du numero;crt_n2_opts_SVC_CLIP_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+CLIR - Liste rouge;crt_n2_opts_SVC_CLIR_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+RingBack Tone;crt_n2_opts_SVC_CRBT_desactiver;SONATEL;;;;true;true
+Transfert d'appel;crt_n2_opts_SVC_CTS_desactiver;SONATEL;;;;true;true
+Appel en attente;crt_n2_opts_SVC_CWS_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+GPRS, inclus Internet + Wap + MMS;crt_n2_opts_SVC_GPRS_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Gratuite gprs;crt_n2_opts_SVC_GRATUITE_GPRS_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Gratuite SMS;crt_n2_opts_SVC_GRATUITE_SMS_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Service LTE (4G);crt_n2_opts_SVC_LTE_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Conference;crt_n2_opts_SVC_MPTY_desactiver;SONATEL;;;;true;true
+Restriction operateur appels entrants;crt_n2_opts_SVC_OPER_BARRIN_desactiver;SONATEL;Gestion;GEST-RECOUVREMENT;GEST-REC-SUSPENSION SUITE IMPAYES;true;true
+Restriction operateur appels sortants;crt_n2_opts_SVC_OPER_BARROUT_desactiver;SONATEL;Gestion;GEST-RECOUVREMENT;GEST-REC-SUSPENSION SUITE IMPAYES;true;true
+Restriction Roaming;crt_n2_opts_SVC_ROAMING_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Service SMS;crt_n2_opts_SVC_SMS_MOMT_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Restriction appels sortants;crt_n2_opts_SVC_USER_BAOC_desactiver;SONATEL;;;;true;true
+Restriction appels sortants vers l'international (IDD);crt_n2_opts_SVC_USER_BOICC_desactiver;SONATEL;;;;true;true
+Messagerie vocale;crt_n2_opts_SVC_VMS_desactiver;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Suspention TOTALE de la Souscription;crt_n2_opts_SUSPEND_TOTALE;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE DE SUSPENSION TOTALE;true;true
+Suspention PARTIELLE de la Souscription;crt_n2_opts_SUSPEND_PARTIELLE;SONATEL;Gestion;GESTION-SIM;GEST-SIM-DEMANDE SUSPENSION PARTIELLE;true;true
+Retablissement Total Souscription;crt_n2_opts_RESUME_TOTALE;SONATEL;Gestion;GESTION-RETABLISSEMENT;GEST-RET-DEMANDE DE RETABLISSEMENT;true;true
+Seddo (Distributeurs) > Réinitialisation Code Secret SEDDO;seddo_n2_opts_reset;SONATEL;Gestion;ACHAT-SEDDO;ACH-SED-ACTIVATION DANS PRETUPS;true;true
+Seddo (Distributeurs) > Déblocage Code Secret SEDDO;seddo_n2_opts_ubar;SONATEL;Gestion;ACHAT-SEDDO;ACH-SED-ACTIVATION DANS PRETUPS;true;true
+Seddo (Distributeurs) > Déblocage et Réinitialisation Code Secret SEDDO;seddo_n2_opts_ubar_reset;SONATEL;Gestion;ACHAT-SEDDO;ACH-SED-ACTIVATION DANS PRETUPS;true;true
+Seddo (Distributeurs) > Demande de Blocage Code Secret SEDDO;seddo_n2_opts_bar;SONATEL;Gestion;GESTION-SEDDO;GEST-SED-SUSPENSION SIM;true;true
+Seddo (Distributeurs) > Réactivation menu e-recharge;seddo_n2_opts_resume;SONATEL;Gestion;ASSISTANCE-SEDDO;ASS-SED-USAGES SEDDO;true;true
+Orange Money - Envoi Code Woyofal;om_n2_opts_envoi_code_woyofal;SONATEL;Assistance;ASSISTANCE-OM;ASS-OM-ASSISTANCE RENVOI CODE ;true;true
+Orange Money - Test de paiement;om_n2_opts_test_paiement_om;SONATEL;Assistance;ASS-MONEY PAIEMENT FACTURE;ASS-MON-PAI-FAC-TEST DE PAIEMENT;true;true
+Modification numéro favorie;cons_rech_n2_opts_MODIF_NUM_FAV;SONATEL;Assistance;RECLAMATION-USAGES;REC-USA-ERREUR ENREGISTREMENT NUMERO FAVORI;true;true
+Contrat - Lien téléchargement MAXIT;crt_n2_lien_telechargement_oem;SONATEL;Assistance;ASSISTANCE-APPLICATION;ASS-APP-ENVOI LIEN TELECHARGEMENT MAX IT;true;true
+ACTIVATION COMPTE TV;crt_n2_activation_compte_tv;SONATEL;Gestion;GEST-ACTIVATION TVO;GEST-ACT-TVO-ACTIVATION COMPTE TV;true;true
+DESACTIVATION COMPTE TV;crt_n2_desactivation_compte_tv;SONATEL;Résiliation;RESIL-COMPTE TVO;RESIL-COMPTE TVO-DESACTIVATION COMPTE TV;true;true
+Orange Money - Renvoyer la notification Tango par SMS;om_n2_opts_envoi_sms_transaction;SONATEL;Assistance;ASS-MONEY GESTION DE COMPTE;ASS-MON-GES-DE-COM-RENVOI DE LA NOTIFICATION TANGO PAR SMS;true;true
+Orange Money - Vérification de l'Historique des transactions entre 2 numéros;om_n2_opts_verification_2_num;SONATEL;Demande d'assistance;ASS-MONEY GESTION DE COMPTE;ASS-MON-GES-DE-COM-VERIFICATION DE L'HISTORIQUE DE TRANSACTIONS ENTRE DEUX NUMEROS;true;true
+Contrat Mobile - Envoyer les paramètres pour mettre à jour le terminal du client ;crt_n2_opts_send_all_setting;PROMOBILE;Assistance_Promobile;ASS-PARAMETRAGE INTERNET MOBILE_;ASS-PAR-INT-MOB-VIA ADM_;true;true
+Contrat Mobile - Action de génération du code de la carte suite soucis carte male grattée;cons_rech_n2_opts_voucher_code;PROMOBILE;Réclamation_Promobile;REC-Usage Services_;REC-Usa-Ser-CARTE CODE ILLISIBLE_;true;true
+Contrat Mobile - Action de vérification de carte de recharge;cons_rech_n2_opts_voucher_carte;PROMOBILE;Réclamation_Promobile;REC-Usage Services_;REC-Usa-Ser-CARTE CODE ILLISIBLE_;true;true
+Orange Money - Réinitialisation Code Secret OM;om_n2_otps_RESTPIN;PROMOBILE;;;;true;true
+Orange Money - Action de Réactivation du compte Orange Money;om_n2_otps_RESUME;PROMOBILE;;;;true;true
+Orange Money - Action de Déblocage et Réinitialisation Code Secret OM;om_n2_otps_UNBARE_RESTPIN;PROMOBILE;;;;true;true
+Orange Money - Action de Déblocage Code Secret OM;om_n2_otps_UNBAR;PROMOBILE;;;;true;true
+Orange Money - Action de Suspension de compte Orange Money;om_n2_otps_SUSPEND;PROMOBILE;;;;true;true
+Service 3G;crt_n2_opts_3G_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SERVICE DATA 3G_;true;true
+Messagerie Vocale(Francais);crt_n2_opts_BAOC_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-BOITE VOCALE FRANCAISE_;true;true
+Ring Back Tone;crt_n2_opts_CRBT_ajout;PROMOBILE;;;;true;true
+Mes Numéros Préférés Orange;crt_n2_opts_FnF_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-ENREGISTREMENT NUMERO FAVORI_;true;true
+Package GPRS/MMS/EDGE;crt_n2_opts_GPRS_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SERVICE DATA GPRS_;true;true
+Presentation du Numero;crt_n2_opts_IDAP_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-ACTIVATION PRESENTATION NUMERO_;true;true
+Appel International;crt_n2_opts_IDD_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-ROAMING_;true;true
+IDENTIF-Suspension partielle;crt_n2_opts_ISUSPP_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SUSPENSION PARTIELLE POUR MOTIF VOL/PERTE_;true;true
+IDENTIF-Suspension Totale;crt_n2_opts_ISUSPT_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SUSPENSION TOTALE POUR MOTIF VOL/PERTE_;true;true
+Service 4G;crt_n2_opts_LTE_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SERVICE DATA 4G_;true;true
+Option sans frontières;crt_n2_opts_MON_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-ROAMING_;true;true
+Messagerie Vocale(Wolof);crt_n2_opts_MSGVW_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-BOITE VOCALE WOLOF_;true;true
+Pay4Me;crt_n2_opts_Pay4Me_ajout;PROMOBILE;;;;true;true
+Liste Rouge;crt_n2_opts_RED_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-LISTE ROUGE_;true;true
+Renvoi si inaccessible;crt_n2_opts_RNVI_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-RENVOI D'APPEL_;true;true
+Renvoi si non réponse;crt_n2_opts_RNVR_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-RENVOI D'APPEL_;true;true
+Regional And YieldZone;crt_n2_opts_RYZ_ajout;PROMOBILE;;;;true;true
+Regional Zone;crt_n2_opts_RZ_ajout;PROMOBILE;;;;true;true
+Signal d'appel;crt_n2_opts_SIGN_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-RENVOI D'APPEL_;true;true
+Suspension Partielle;crt_n2_opts_SUSPP_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SUSPENSION PARTIELLE POUR MOTIF VOL/PERTE_;true;true
+Suspension Totale;crt_n2_opts_SUSPT_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SUSPENSION TOTALE POUR MOTIF VOL/PERTE_;true;true
+Suspension Fraude;crt_n2_opts_SUSPB_ajout;PROMOBILE;Gestion_Promobile;GEST-ACTIVATION_;GEST-ACT-SUSPENSION TOTALE POUR MOTIF VOL/PERTE_;true;true
+Suspension Arnaque;crt_n2_opts_SUSTA_ajout;PROMOBILE;;;;true;true
+Suspension Routage Annonce;crt_n2_opts_SUSPRA_ajout;PROMOBILE;;;;true;true
+VISIOPHONIE;crt_n2_opts_VISIO_ajout;PROMOBILE;;;;true;true
+Wax ba tass;crt_n2_opts_WBT_ajout;PROMOBILE;;;;true;true
+YieldZone;crt_n2_opts_YZ_ajout;PROMOBILE;;;;true;true
+Service 3G;crt_n2_opts_3G_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-SERVICE DATA 3G_;true;true
+Messagerie Vocale(Francais);crt_n2_opts_BAOC_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-DES-BOITE VOCALE  FRANCAISE_;true;true
+Ring Back Tone;crt_n2_opts_CRBT_suppression;PROMOBILE;;;;true;true
+Mes Numéros Préférés Orange;crt_n2_opts_FnF_suppression;PROMOBILE;;;;true;true
+Package GPRS/MMS/EDGE;crt_n2_opts_GPRS_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-SERVICE DATA GPRS_;true;true
+Presentation du Numero;crt_n2_opts_IDAP_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-DES-ACTIVATION PRESENTATION NUMERO_;true;true
+Appel International;crt_n2_opts_IDD_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-ROAMING_;true;true
+IDENTIF-Suspension partielle;crt_n2_opts_ISUSPP_suppression;PROMOBILE;;;;true;true
+IDENTIF-Suspension Totale;crt_n2_opts_ISUSPT_suppression;PROMOBILE;;;;true;true
+Service 4G;crt_n2_opts_LTE_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-SERVICE DATA 4G_;true;true
+Option sans frontières;crt_n2_opts_MON_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-ROAMING_;true;true
+Messagerie Vocale(Wolof);crt_n2_opts_MSGVW_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-DES-BOITE VOCALE  WOLOF_;true;true
+Mobile  Social Live;crt_n2_opts_MSL_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-SERVICE DATA MSL_;true;true
+Pay4Me;crt_n2_opts_Pay4Me_suppression;PROMOBILE;;;;true;true
+Liste Rouge;crt_n2_opts_RED_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-LISTE ROUGE_;true;true
+Renvoi si inaccessible;crt_n2_opts_RNVI_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-RENVOI D'APPEL_;true;true
+Renvoi si non réponse;crt_n2_opts_RNVR_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-RENVOI D'APPEL_;true;true
+Regional And YieldZone;crt_n2_opts_RYZ_suppression;PROMOBILE;;;;true;true
+Regional Zone;crt_n2_opts_RZ_suppression;PROMOBILE;;;;true;true
+Signal d'appel;crt_n2_opts_SIGN_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-RENVOI D'APPEL_;true;true
+Messagerie ecrite-Destination-mobile;crt_n2_opts_SMDM_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-SERVICE SMS_;true;true
+Messagerie ecrite-Origine mobile;crt_n2_opts_SMMO_suppression;PROMOBILE;Résiliation_Promobile;RESIL-RESILIATION_;RESIL-RES-SERVICE SMS_;true;true
+Suspension Buster;crt_n2_opts_SUSPB_suppression;PROMOBILE;Gestion_Promobile;GEST-SUSPENSION_;GEST-SUS-SUSPENSION TOTALE POUR MOTIF VOL/PERTE_;true;true
+Suspension Partielle;crt_n2_opts_SUSPP_suppression;PROMOBILE;Gestion_Promobile;GEST-SUSPENSION_;GEST-SUS-SUSPENSION PARTIELLE POUR MOTIF VOL/PERTE_;true;true
+Suspension Totale;crt_n2_opts_SUSPT_suppression;PROMOBILE;Gestion_Promobile;GEST-SUSPENSION_;GEST-SUS-SUSPENSION TOTALE POUR MOTIF VOL/PERTE_;true;true
+Suspension Arnaque;crt_n2_opts_SUSTA_suppression;PROMOBILE;Gestion_Promobile;GEST-SUSPENSION_;GEST-SUS-SUSPENSION TOTALE POUR MOTIF VOL/PERTE_;true;true
+Suspension Routage Annonce;crt_n2_opts_SUSPRA_suppression;PROMOBILE;Gestion_Promobile;GEST-SUSPENSION_;GEST-SUS-SUSPENSION TOTALE POUR MOTIF VOL/PERTE_;true;true
+VISIOPHONIE;crt_n2_opts_VISIO_suppression;PROMOBILE;;;;true;true
+Wax ba tass;crt_n2_opts_WBT_suppression;PROMOBILE;;;;true;true
+YieldZone;crt_n2_opts_YZ_suppression;PROMOBILE;;;;true;true
+Orange Money - Envoi Code Woyofal;om_n2_opts_envoi_code_woyofal;PROMOBILE;;;;true;true
+Orange Money - Test de paiement;om_n2_opts_test_paiement_om;PROMOBILE;;;;true;true
+Modification numéro favorie;cons_rech_n2_opts_MODIF_NUM_FAV;PROMOBILE;Assistance_Promobile;ASS-USAGE VOIX_;ASS-USA-ET-SER-CHANGEMENT NUMERO FAVORI_;true;true
+Contrat - Lien téléchargement OeM;crt_n2_lien_telechargement_oem;PROMOBILE;Assistance_Promobile;ASS-USAGES ET SERVICES ORANGE ET MOI_;ASS-USA-INT-MOB-ENVOI LIEN ORANGE ET MOI_;true;true
+Orange Money - Vérification de l'Historique des transactions entre 2 numéros;om_n2_opts_verification_2_num;PROMOBILE;;;;true;true
+Orange Money - Renvoyer la notification Tango par SMS;om_n2_opts_envoi_sms_transaction;PROMOBILE;;;;true;true
+CRBT - Désactiver le DALAL;crbt_desactiver_dalal;SONATEL;Résiliation;RESILIATION-SVA;RES-SVA-DESACTIVATION SERVICE DALAL;true;true
+CRBT - Activer le DALAL;crbt_activer_dalal;SONATEL;Gestion;GESTION-SVA;GEST-SVA-ACTIVATION SERVICE DALAL;true;true
+CRBT - Supprimer le DALAL;crbt_supprimer_dalal;SONATEL;Gestion;GESTION-SVA;GEST-SVA-SUPPRESSION TONALITE SERVICE DALAL;true;true
+CRBT - Activer le DALAL;crbt_activer_dalal;PROMOBILE;Gestion;GESTION-SVA;GEST-SVA-ACTIVATION SERVICE;true;true
+CRBT - Désactiver le DALAL;crbt_desactiver_dalal;PROMOBILE;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+CRBT - Supprimer le DALAL;crbt_supprimer_dalal;PROMOBILE;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Contrat - ENVOI LIEN ORANGE MONEY;crt_n2_lien_telechargement_om;SONATEL;Assistance;ASSISTANCE-APPLICATION;ASS-APP-ENVOI LIEN TELECHARGEMENT ORANGE MONEY;true;true
+Contrat - ENVOI LIEN ORANGE MONEY;crt_n2_lien_telechargement_om;PROMOBILE;Assistance;ASSISTANCE-APPLICATION;ASS-APP-ENVOI LIEN TELECHARGEMENT ORANGE MONEY;true;true
+TVO PERTE DU CODE ADULTE;crt_n2_cesar_perte_code_tv;SONATEL;Assistance;ASSISTANCE-DERANGEMENT-TVO;ASS-DER-PERTE CODE PARENTAL OU ADULTE;true;true
+TVO NON VISUALISATION DES CHAINES SOUSCRITES;crt_n2_cesar_non_visualisation_chaine;SONATEL;Assistance;ASS-DER-DERANGEMENT TVO;ASS-DER-TVO-NON VISUALISATION DES CHAINES SOUSCRITES;true;true
+TVO PERTE DU MOT DE PASSE;crt_n2_cesar_perte_mot_de_passe;SONATEL;Assistance;ASS-DER-DERANGEMENT TVO;ASS-DER-TVO-PERTE DU MOT DE PASSE;true;true
+Orange Money - ENVOI LIEN WEB OM;om_n2_lien_web_om;SONATEL;Assistance;ASSISTANCE-APPLICATION;ASS-APP-ENVOI LIEN TELECHARGEMENT ORANGE MONEY;true;true
+Déconnecter la session RBS;deconnecter_session_rbs;SONATEL;ASS-Usage Services;ASS-USA-SER-DÉCONNECTER LA SESSION;PCCI-OP W2C-OP SITEL-GLOBAL SAVR RCD 1413 HV-TER 1413-KSERV;true;true
+Déverrouillage compte RBS;deverrouillage_rbs;SONATEL;ASS-Usage Services;ASS-USA-SER-DÉVERROUILLAGE COMPTE;PCCI-OP W2C-OP SITEL-GLOBAL SAVR RCD 1413 HV-TER 1413-KSERV;true;true
+Verrouillage compte RBS;verrouillage_rbs;SONATEL;ASS-Usage Services;ASS-USA-SER-VERROUILLAGE COMPTE;PCCI-OP W2C-OP SITEL-GLOBAL SAVR RCD 1413 HV-TER 1413-KSERV;true;true
+Envoi Lien déplafonnement OM;crt_n2_lien_deplafonnement_om;SONATEL;Gestion;GESTION-OM;GEST-OM-DEPLAFONNEMENT;true;true
+Désactiver compte Smartis;desactive_smartis;SONATEL;;;;true;true
+Restaurer Contact Smartis;restaurer_smartis;SONATEL;;;;true;true
+White Liste Numéro Recharge;crt_n2_opts_whitelist;SONATEL;Assistance;ASSISTANCE-WHITELIST ;ASS-WHI-LIST-NUMERO MOBILE;true;true
+whitelister Customer Care;crt_n2_opts_whitelistcc;SONATEL;Assistance;ASSISTANCE-WHITELIST ;ASS-WHI-LIST-NUMERO MOBILE;true;true
+Réinitialiser HOME_AREA Cell Lock;reinit_home_area;SONATEL;Assistance;ASS-SVA;ASS-SVA-REINITIALISATION HOME AREA;true;true
+Activer Sargal;flytxt_activer_sargal;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-SARGAL-Flytxt;true;true
+Désactiver Sargal;flytxt_desactiver_sargal;SONATEL;Résiliation;RESIL-RESILIATION;RESIL-RES-SARGAL-Flytxt;true;true
+Annulation transaction OM;om_n2_otps_annulation_transaction;SONATEL;Assistance;ASSISTANCE-OM;ASS-OM-ANNULATION TRANSACTION NATIONALE;true;true
+Contrat - Lien téléchargement Wido;crt_n2_lien_telechargement_wido;SONATEL;Assistance;ASSISTANCE-APPLICATION;ASS-APP-ENVOI LIEN WIDO;true;true
+Envoi Facture par eMail;fact_n2_rub_fact_rec_mob_posthyb_envoi_facture_postpaye;SONATEL;Réclamation;RECLAMATION-FACTURE;REC-FAC-NON RECEPTION FACTURE FAL;true;true
+Envoi Facture par SMS;fact_n2_rub_fact_rec_mob_posthyb_envoi_facture_sms;SONATEL;Réclamation;RECLAMATION-FACTURE;REC-FAC-NON RECEPTION FACTURE FAL;true;true
+Blacklister Sargal;flytxt_blacklister_sargal;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-SARGAL-Flytxt;true;true
+Whitelister Sargal;flytxt_whitelister_sargal;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-SARGAL-Flytxt;true;true
+Lien tontou whatsapp care;crt_n2_lien_tontou_whatsapp;SONATEL;ASSISTANCE;ASSISTANCE-APPLICATION;ASS-APP-ENVOI LIEN whatsapp care tontou;true;true
+Reinitialisation Code secret Seddo P2P;seddo_n2_opts_reset_p2p;SONATEL;ASSISTANCE;ASSISTANCE-APPLICATION;ASS-REINITIALISATION CODE PIN SEDDO;true;true
+Service 5G;crt_n2_opts_5G_ajout;SONATEL;Gestion;GEST-ACTIVATION SERVICE;GEST-ACT-ACTIVATION SERVICE;true;true
+Service 5G;crt_n2_opts_5G_suppression;SONATEL;Résiliation;RESILIATION-SERVICE;RES-SER-DESACTIVATION DE SERVICE;true;true
+Changer SSID 24;papyrus_changer_ssid24;SONATEL;;;;true;true
+Changer Password 24;papyrus_changer_password24;SONATEL;;;;true;true
+Changer SSID 5GH;papyrus_changer_ssisd5;SONATEL;;;;true;true
+Changer password 5GH;papyrus_changer_password5;SONATEL;;;;true;true
+Reboot Modem;papyrus_reboot;SONATEL;;;;true;true
