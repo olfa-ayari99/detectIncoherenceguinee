@@ -17,15 +17,16 @@ public class CaseCrm {
         private String login;
 
         // Getters and Setters
-        public String getIdTransaction() {
-            return idInteraction;
-        }
 
-        public void setIdTransaction(String idTransaction) {
-            this.idInteraction = idTransaction;
-        }
+    public String getIdInteraction() {
+        return idInteraction;
+    }
 
-        public String getCodification() {
+    public void setIdInteraction(String idInteraction) {
+        this.idInteraction = idInteraction;
+    }
+
+    public String getCodification() {
             return codification;
         }
 
