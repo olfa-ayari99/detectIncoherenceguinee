@@ -1,10 +1,7 @@
-Date;ip;server Ip;Login;Module;Service;Code service;Operation;Msisdn;Id Contrat;Id Customer;Source d'interface;Id Crm;Statut;Résultat;Codification;Id Interaction;Type d'interaction;Case Id
-16/3/2025 0:5:29;10.173.85.32;10.173.86.175;call_tmp_ssoumah03;Orange Money;Correction transaction OM;CORRECTION;CORRECTION;611661493;5922138;551450007;Tango;;SUCCESS;CI250313.2120.A96084 : TC250314.0005.D77400;-;-;-;-
-16/3/2025 0:5:32;10.173.85.32;10.173.86.175;call_tmp_ssoumah03;Orange Money;Correction transaction OM;CORRECTION;CORRECTION;611661493;5922138;551450007;Tango;;ERROR;CI250313.2120.A96084 : 01097 : Annulation en cours;-;-;-;-
-16/3/2025 0:7:57;10.173.85.32;10.173.86.174;pcci_tmp_kaba30;Orange Money;Correction transaction OM;CORRECTION;CORRECTION;621165337;41218522;551450007;Tango;;SUCCESS;CI250313.2354.A47130 : TC250314.0007.D77426;-;-;-;-
-16/3/2025 0:12:36;10.173.85.32;10.173.86.175;call_tmp_mdiallo14;Orange Money;Correction transaction OM;CORRECTION;CORRECTION;620923970;42028072;551450007;Tango;;SUCCESS;PP250313.2323.B07781 : TC250314.0012.A81227;-;-;-;-
-16/3/2025 0:15:15;10.173.85.32;10.173.86.175;call_tmp_ayansane04;Orange Money;Correction transaction OM;CORRECTION;CORRECTION;628460393;40846632;551450007;Tango;;SUCCESS;PP250313.2355.D16548 : TC250314.0015.C82175;-;-;-;-
-16/3/2025 0:17:46;10.173.85.32;10.173.86.174;pcci_tmp_balde3166;Contrat;Contrat Mobile - desactivation call signiture ;deactivate;Call_Signiture_deactivate;224621744859;41805782;0021741216;SVA;0021741216;SUCCESS;Successful operation;-;{F9BD9B93-6900-F011-A2F5-000C29E26B51};phonecall;-
-16/3/2025 0:17:55;10.173.85.32;10.173.86.174;pcci_tmp_balde3166;Contrat;Contrat Mobile - desactivation call signiture ;deactivate;Call_Signiture_deactivate;224621744859;41805782;0021741216;CRM;0021741216;undefined;undefined;undefined;{F9BD9B93-6900-F011-A2F5-000C29E26B51};phonecall;undefined
-16/3/2025 0:10:55;10.173.85.32;10.173.86.174;pcci_tmp_balde3166;Contrat;Contrat Mobile - desactivation call signiture ;deactivate;Call_Signiture_deactivate;224621744859;41805782;0021741216;CRM;0021741216;SUCCESS;undefined;Assistance|ASS-MONEY GESTION DE COMPTE|ASS-MON-GES-DE-COM-RENVOI DE LA NOTIFICATION TANGO PAR SMS;{F9BD9B93-6900-F011-A2F5-000C29E26B51};phonecall;undefined
-16/3/2025 0:17:55;10.173.85.32;10.173.86.174;pcci_tmp_balde3166;Contrat;Contrat Mobile - desactivation call signiture ;deactivate;Call_Signiture_deactivate;224621744859;41805782;0021741216;CRM;0021741216;SUCCESS;undefined;Assistance|ASS-MONEY GESTION DE COMPTE|ASS-MON-GES-DE-COM-RENVOI DE LA NOTIFICATION TANGO PAR SMS;{F9BD9B93-6900-F011-A2F5-000C29E26B51};phonecall;undefined
+Libelle;Code service;Operation;Source d'interface
+Suspension OM;CORRECTION;CORRECTION;Tango
+Déblocages OM;CORRECTION;CORRECTION;Tango
+Levée de suspension;CORRECTION;CORRECTION;Tango
+Réinitialisation;CORRECTION;CORRECTION;Tango
+Activation/désactivation SVA;deactivate;Call_Signiture_deactivate;SVA
+Correction d'erreur de transfert;deactivate;Call_Signiture_deactivate;CRM
