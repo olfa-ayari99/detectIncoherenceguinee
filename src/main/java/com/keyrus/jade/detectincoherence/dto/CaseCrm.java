@@ -54,7 +54,7 @@ public class CaseCrm {
 
     }
     public String getKey() {
-        return idTransaction + "|" + codification + "|" + login;
+        return login + "|" + idTransaction + "|" + codification;
     }
 }
 

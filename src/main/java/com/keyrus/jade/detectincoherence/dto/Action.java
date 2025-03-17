@@ -200,6 +200,6 @@ public class Action {
     }
 
     public String getKey() {
-        return idInteraction + "|" + codification + "|" + login;
+        return login + "|" + idInteraction + "|" + codification;
     }
 }

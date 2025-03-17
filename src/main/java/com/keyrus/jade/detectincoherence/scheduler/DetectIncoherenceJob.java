@@ -258,7 +258,7 @@ public class DetectIncoherenceJob {
             for (Action action : actions) {
                 LocalDateTime actionDate = LocalDateTime.parse(action.getDate(), FORMATTER);
                 LocalDateTime crmDate = crmMap.get(action.getKey());
-                if (action.getIdInteraction()=="-"||crmDate == null || Math.abs(Duration.between(crmDate, actionDate).getSeconds()) > 60) {
+                if (crmDate == null || Math.abs(Duration.between(crmDate, actionDate).getSeconds()) > Integer.valueOf(intervalle)) {
                     inconsistencies.add(action);
                 }
             }
@@ -393,11 +393,7 @@ public class DetectIncoherenceJob {
         @Override
         public void execute(JobExecutionContext context) {
             try {
-                /*LocalDateTime currentDateTime =LocalDateTime.now();
 
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yyyy");
-                String date = currentDateTime.format(formatter);
-                * */
                 List<CaseCrm> crmData = List.of();
                 List<Action> vueData= List.of();
 
