@@ -1,112 +1,205 @@
 package com.keyrus.jade.detectincoherence.dto;
 
+import java.util.Date;
+
 public class Action {
 
-
-    private String tag;
-    private String libelle;
-    private String operateur;
-    private String sujet;
-    private String categorie;
-    private String motif;
-    private Boolean active;
-    private Boolean EstCreateCaseAuto;
-
-
-    public Action( String libelle,String tag, String operateur,  String sujet,String categorie, String motif, Boolean active, Boolean estCreateCaseAuto) {
-        this.tag = tag;
-        this.libelle = libelle;
-        this.operateur = operateur;
-        this.categorie = categorie;
-        this.sujet = sujet;
-        this.motif = motif;
-        this.active = active;
-        EstCreateCaseAuto = estCreateCaseAuto;
+    public Action(String date, String ip, String serverIp, String login, String module, String service, String codeService, String operation, String msisdn, String idContrat, String idCustomer, String sourceInterface, String idCrm, String statut, String resultat, String codification, String idInteraction, String typeInteraction, String caseId) {
+        this.date = date;
+        this.ip = ip;
+        this.serverIp = serverIp;
+        this.login = login;
+        this.module = module;
+        this.service = service;
+        this.codeService = codeService;
+        this.operation = operation;
+        this.msisdn = msisdn;
+        this.idContrat = idContrat;
+        this.idCustomer = idCustomer;
+        this.sourceInterface = sourceInterface;
+        this.idCrm = idCrm;
+        this.statut = statut;
+        this.resultat = resultat;
+        this.codification = codification;
+        this.idInteraction = idInteraction;
+        this.typeInteraction = typeInteraction;
+        this.caseId = caseId;
     }
 
-    public Action() {
+    private String date;
+    private String ip;
+    private String serverIp;
+    private String login;
+    private String module;
+    private String service;
+    private String codeService;
+    private String operation;
+    private String msisdn;
+    private String idContrat;
+    private String idCustomer;
+    private String sourceInterface;
+    private String idCrm;
+    private String statut;
+    private String resultat;
+    private String codification;
+    private String idInteraction;
+    private String typeInteraction;
+    private String caseId;
 
+    // Getters and Setters
+    public String getDate() {
+        return date;
     }
 
-    public String getTag() {
-        return tag;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void setTag(String tag) {
-        this.tag = tag;
+    public String getIp() {
+        return ip;
     }
 
-    public String getLibelle() {
-        return libelle;
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 
-    public void setLibelle(String libelle) {
-        this.libelle = libelle;
+    public String getServerIp() {
+        return serverIp;
     }
 
-    public String getSujet() {
-        return sujet;
+    public void setServerIp(String serverIp) {
+        this.serverIp = serverIp;
     }
 
-    public void setSujet(String sujet) {
-        this.sujet = sujet;
+    public String getLogin() {
+        return login;
     }
 
-    public String getCategorie() {
-        return categorie;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public void setCategorie(String categorie) {
-        this.categorie = categorie;
+    public String getModule() {
+        return module;
     }
 
-    public String getMotif() {
-        return motif;
+    public void setModule(String module) {
+        this.module = module;
     }
 
-    public void setMotif(String motif) {
-        this.motif = motif;
+    public String getService() {
+        return service;
     }
 
-    public Boolean getActive() {
-        return active;
+    public void setService(String service) {
+        this.service = service;
     }
 
-    public void setActive(Boolean active) {
-        this.active = active;
+    public String getCodeService() {
+        return codeService;
     }
 
-    public Boolean getEstCreateCaseAuto() {
-        return EstCreateCaseAuto;
+    public void setCodeService(String codeService) {
+        this.codeService = codeService;
     }
 
-    public void setEstCreateCaseAuto(Boolean estCreateCaseAuto) {
-        EstCreateCaseAuto = estCreateCaseAuto;
+    public String getOperation() {
+        return operation;
     }
 
-    public String getOperateur() {
-        return operateur;
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
-    public void setOperateur(String operateur) {
-        this.operateur = operateur;
+    public String getMsisdn() {
+        return msisdn;
     }
-    public boolean isValid() {
-        return sujet != null && !sujet.trim().isEmpty() &&
-                categorie != null && !categorie.trim().isEmpty() &&
-                motif != null && !motif.trim().isEmpty() &&
-        operateur != null && !operateur.trim().isEmpty()&&
-        libelle != null && !libelle.trim().isEmpty()&&
-        tag != null && !tag.trim().isEmpty();
 
-
-
-
-
-
-
+    public void setMsisdn(String msisdn) {
+        this.msisdn = msisdn;
     }
-    public String getConcatenatedFields() {
-        return sujet + "|" + categorie + "|" + motif;
+
+    public String getIdContrat() {
+        return idContrat;
+    }
+
+    public void setIdContrat(String idContrat) {
+        this.idContrat = idContrat;
+    }
+
+    public String getIdCustomer() {
+        return idCustomer;
+    }
+
+    public void setIdCustomer(String idCustomer) {
+        this.idCustomer = idCustomer;
+    }
+
+    public String getSourceInterface() {
+        return sourceInterface;
+    }
+
+    public void setSourceInterface(String sourceInterface) {
+        this.sourceInterface = sourceInterface;
+    }
+
+    public String getIdCrm() {
+        return idCrm;
+    }
+
+    public void setIdCrm(String idCrm) {
+        this.idCrm = idCrm;
+    }
+
+    public String getStatut() {
+        return statut;
+    }
+
+    public void setStatut(String statut) {
+        this.statut = statut;
+    }
+
+    public String getResultat() {
+        return resultat;
+    }
+
+    public void setResultat(String resultat) {
+        this.resultat = resultat;
+    }
+
+    public String getCodification() {
+        return codification;
+    }
+
+    public void setCodification(String codification) {
+        this.codification = codification;
+    }
+
+    public String getIdInteraction() {
+        return idInteraction;
+    }
+
+    public void setIdInteraction(String idInteraction) {
+        this.idInteraction = idInteraction;
+    }
+
+    public String getTypeInteraction() {
+        return typeInteraction;
+    }
+
+    public void setTypeInteraction(String typeInteraction) {
+        this.typeInteraction = typeInteraction;
+    }
+
+    public String getCaseId() {
+        return caseId;
+    }
+
+    public void setCaseId(String caseId) {
+        this.caseId = caseId;
+    }
+
+    public String getKey() {
+        return idInteraction + "|" + codification + "|" + login;
     }
 }

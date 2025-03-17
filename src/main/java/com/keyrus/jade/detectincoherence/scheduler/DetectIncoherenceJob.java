@@ -1,7 +1,7 @@
 package com.keyrus.jade.detectincoherence.scheduler;
 
 import com.keyrus.jade.detectincoherence.dto.Action;
-import com.keyrus.jade.detectincoherence.dto.Codification;
+import com.keyrus.jade.detectincoherence.dto.CaseCrm;
 import com.keyrus.jade.detectincoherence.repository.ActionRepository;
 import com.keyrus.jade.detectincoherence.repository.CodificationRepository;
 import jakarta.annotation.PostConstruct;
@@ -20,15 +20,18 @@ import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.stream.Collectors;
 
@@ -46,7 +49,9 @@ public class DetectIncoherenceJob {
     private  static ActionRepository actionRepository ;
     private  static CodificationRepository codificationRepository ;
 
-
+    private static String nbJours;
+    @Value("${retentionLog}")
+    private   String nbJoursConfig;
     private  static String requestCrm ;
     @Value("${request.crm}")
     private  String requestConfigCrm ;
@@ -70,7 +75,9 @@ public class DetectIncoherenceJob {
     @Value("${start.date}")
     private  String startDayConfig;
 
-
+    private  static String intervalle ;
+    @Value("${intervall.tolerence.action}")
+    private  String intervalleConfig;
 
 
     private static String inputPathCrm;
@@ -112,6 +119,8 @@ public class DetectIncoherenceJob {
 
     @PostConstruct
     public void init() {
+        nbJours=nbJoursConfig;
+        intervalle=intervalleConfig;
         actionRepository=actionRepositoryConfig;
         codificationRepository=codificationRepositoryConfig;
         requestVue=requestConfigVue;
@@ -161,17 +170,59 @@ public class DetectIncoherenceJob {
 
     public  static   class DetectIncoherence implements Job {
 
-        private static List<Codification> readCSVCrm(String filePath) throws IOException {
-            List<Codification> records = new ArrayList<>();
+        private static List<CaseCrm> readCSVCrm(String filePath,String date) throws IOException {
+            List<CaseCrm> records = new ArrayList<>();
+           String dateFormatted= dateFormatter(date,"yyyy-MM-dd","d/M/yyyy");
+
             try (BufferedReader br = Files.newBufferedReader(Paths.get(filePath))) {
                 String line;
                 br.readLine(); // Skip header
                 while ((line = br.readLine()) != null) {
                     String[] values = line.split(";");
-                    if (values.length >= 3) {
-                        Codification codification = new Codification(values[0], values[1], values[2]);
-                        if (codification.isValid()) {
-                            records.add(codification);
+                    if (values.length >= 4 && (values[0].startsWith(dateFormatted))) {
+                        CaseCrm caseCrm = new CaseCrm(values[0], values[1], values[2],values[3]);
+
+                            records.add(caseCrm);
+
+                    }
+                }
+            }
+            return records;
+        }
+
+        private static List<Action> readCSVVue(String filePath,String date) throws IOException {
+            String dateFormatted= dateFormatter(date,"yyyy-MM-dd","d/M/yyyy");
+
+            List<Action> records = new ArrayList<>();
+            try (BufferedReader br = Files.newBufferedReader(Paths.get(filePath))) {
+                String line;
+                br.readLine(); // Skip header
+                while ((line = br.readLine()) != null) {
+                    String[] values = line.split(";");
+                    if (values.length >= 18) {
+                        Action action = new Action(values[0],
+                                values[1],
+                                values[2],
+                                values[3],
+                                values[4],
+                                values[5],
+                                values[6],
+                                values[7],
+                                values[8],
+                                values[9],
+                                values[10],
+                                values[11],
+                                values[12],
+                                values[13],
+                                values[14],
+                                values[15],
+                                values[16],
+                                values[17]
+                                ,values[18]
+                        );
+
+                        if( values[0].startsWith(dateFormatted) && values[13].equals("SUCCESS") ) {
+                            records.add(action);
                         }
                     }
                 }
@@ -179,93 +230,42 @@ public class DetectIncoherenceJob {
             return records;
         }
 
-        private static List<Action> readCSVVue(String filePath) throws IOException {
-            List<Action> records = new ArrayList<>();
-            try (BufferedReader br = Files.newBufferedReader(Paths.get(filePath))) {
-                String line;
-                br.readLine(); // Skip header
-                while ((line = br.readLine()) != null) {
-                    String[] values = line.split(";");
-                    if (values.length >= 8) {
 
-                        Boolean active = Boolean.parseBoolean(values[6]);
-                        Boolean estCreateCaseAuto = Boolean.parseBoolean(values[7]);
-                        Action action = new Action(values[0], values[1], values[2],values[3], values[4], values[5], active, estCreateCaseAuto);
-                            records.add(action);
+       public static String dateFormatter(String dateParam, String inputPattern, String outputPattern) {
+           Date date1;
+           String date2 = "";
+           SimpleDateFormat formatter = new SimpleDateFormat(inputPattern);
+           try {
+               date1 = formatter.parse(dateParam);
+               formatter.applyPattern(outputPattern);
+               date2 = formatter.format(date1);
+           } catch (Exception e) {
+               return "";
+           }
+           return date2;
+       }
 
-                    }
+        public  List<Action> findIncoherences(List<Action> actions,List<CaseCrm> crmCases ) {
+
+             DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("d/M/yyyy H:m:s");
+
+            Map<String, LocalDateTime> crmMap = new HashMap<>();
+
+            for (CaseCrm crm : crmCases) {
+                crmMap.put(crm.getKey(), LocalDateTime.parse(crm.getDateCreationCase(), FORMATTER));
+            }
+            List<Action> inconsistencies = new ArrayList<>();
+            for (Action action : actions) {
+                LocalDateTime actionDate = LocalDateTime.parse(action.getDate(), FORMATTER);
+                LocalDateTime crmDate = crmMap.get(action.getKey());
+                if (action.getIdInteraction()=="-"||crmDate == null || Math.abs(Duration.between(crmDate, actionDate).getSeconds()) > 60) {
+                    inconsistencies.add(action);
                 }
             }
-            return records;
+
+            return inconsistencies;
         }
 
-        private static List<Codification> fetchDataCRM(String dbUrl, String dbUsername, String dbPassword,String request) throws SQLException {
-            List<Codification> entries = new ArrayList<>();
-            String query = request;
-            try (Connection conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
-                 Statement stmt = conn.createStatement();
-                 ResultSet rs = stmt.executeQuery(query)) {
-                while (rs.next()) {
-
-                    Codification codification = new Codification();
-
-                    codification.setSujet(rs.getString(ConstantsHolder.CRMCASESUBJECT) != null
-                            ? rs.getString(ConstantsHolder.CRMCASESUBJECT) : "");
-                    codification.setCategorie(rs.getString(ConstantsHolder.CRMCASECATEGORY) != null
-                            ? rs.getString(ConstantsHolder.CRMCASECATEGORY) : "");
-                    codification.setMotif(rs.getString(ConstantsHolder.CRMCASEREASON) != null
-                            ? rs.getString(ConstantsHolder.CRMCASEREASON) : "");
-
-                }
-
-            }
-            return entries;
-        }
-        private static List<Action> fetchDataVue(String dbUrl, String dbUsername, String dbPassword,String request) throws SQLException {
-            List<Action> entries = new ArrayList<>();
-            String query = request;
-            try (Connection conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
-                 Statement stmt = conn.createStatement();
-                 ResultSet rs = stmt.executeQuery(query)) {
-                while (rs.next()) {
-
-                    Action action = new Action();
-                    action.setOperateur(rs.getString(ConstantsHolder.TAGOPERATOR) != null
-                            ? rs.getString(ConstantsHolder.TAGOPERATOR) : "");
-                    action.setTag(
-                            rs.getString(ConstantsHolder.TAGACTION) != null ? rs.getString(ConstantsHolder.TAGACTION) : "");
-                    action.setLibelle(
-                            rs.getString(ConstantsHolder.LABELACTION) != null ? rs.getString(ConstantsHolder.LABELACTION) : "");
-                    action.setSujet(rs.getString(ConstantsHolder.CRMCASESUBJECT) != null
-                            ? rs.getString(ConstantsHolder.CRMCASESUBJECT) : "");
-                    action.setCategorie(rs.getString(ConstantsHolder.CRMCASECATEGORY) != null
-                            ? rs.getString(ConstantsHolder.CRMCASECATEGORY) : "");
-                    action.setMotif(rs.getString(ConstantsHolder.CRMCASEREASON) != null
-                            ? rs.getString(ConstantsHolder.CRMCASEREASON) : "");
-                    action.setActive(rs.getBoolean(ConstantsHolder.ACTIVE));
-                    action.setEstCreateCaseAuto(rs.getBoolean(ConstantsHolder.EstCreateCaseAuto));
-                    entries.add(action);
-
-                    //LIBELLE
-                }
-
-            }
-            return entries;
-        }
-
-
-        private static List<Action> findIncoherences(List<Action> vueData, List<Codification> crmData) {
-            Set<String> crmSet = crmData.stream()
-                    .map(Codification::getConcatenatedFields)
-                    .collect(Collectors.toSet());
-
-            return vueData.stream()
-                    .filter(v -> !crmSet.contains(v.getConcatenatedFields())&& (v.getActive()&&v.getEstCreateCaseAuto()
-                                )
-
-                    )
-                    .collect(Collectors.toList());
-        }
 
 
         //return File ou string p   path
@@ -275,10 +275,13 @@ public class DetectIncoherenceJob {
             filePath=filePath+"incoherent_vue"+"_"+date+".csv";
 
             try (BufferedWriter bw = Files.newBufferedWriter(Paths.get(filePath))) {
-                bw.write("libelle;tag;operateur;sujet;categorie;motif\n");
+                bw.write("Date;ip;server Ip;Login;Module;Service;Code service;Operation;Msisdn;Id Contrat;Id Customer;Source d'interface;Id Crm;Statut;Résultat;Codification;Id Interaction;Type d'interaction;Case Id\n");
 
                 for (Action record : data) {
-                    bw.write(record.getLibelle()+";"+record.getTag()+";"+record.getOperateur()+";"+record.getConcatenatedFields().replace("|", ";"));
+                    bw.write(record.getDate()+";"+record.getIp()+";"+record.getServerIp()+";"+record.getLogin()+";"+record.getModule()+";"+
+                            record.getService()+";"+record.getCodeService()+";"+record.getOperation()+";"+record.getMsisdn()+";"+record.getIdContrat()
+                            +";"+record.getIdCustomer()+";"+record.getSourceInterface()+";"+record.getIdCrm()+";"+record.getStatut()+";"+record.getResultat()+";"+record.getCodification()+";"+record.getIdInteraction()+
+                            ";"+record.getTypeInteraction()+";"+record.getCaseId());
                     bw.newLine();
                 }
             }
@@ -292,6 +295,8 @@ public class DetectIncoherenceJob {
 
 
         private static void sendMail(String emailTo, String emailfrom , String csvFilePath,String body,String subject) {
+
+
             //  emailList = emailList.replace(";", ",");
             // Configurer le service de messagerie (remplacez par votre configuration)
             String host = "smtp.gmail.com";
@@ -337,41 +342,94 @@ public class DetectIncoherenceJob {
                         e.printStackTrace();
                     }
         }
+        private static String extractDateFromFileName(String fileName) {
+            if (fileName.matches(".*(\\d{1,2}/\\d{1,2}/\\d{4}).*")) {
+                return fileName.replaceAll(".*?(\\d{1,2}/\\d{1,2}/\\d{4}).*", "$1");
+        /* Remplace tout le texte du nom du fichier par uniquement la date trouvée.
+           $1 représente la partie capturée (d/M/yyyy) */
+            }
+            return null;
+        }
+
+
+        public static List<String> findMissingDates(String directoryPath, int days) {
+            File folder = new File(directoryPath);
+            if (!folder.exists() || !folder.isDirectory()) {
+                System.out.println("Erreur : Le dossier n'existe pas !");
+                return Collections.emptyList();
+            }
+            //  Récupérer les fichiers et extraire les dates valides
+            Set<String> fileDates = new HashSet<>();
+
+            /**
+             *listFiles() peut retourner null si folder n'existe pas ou n'est pas un dossier.
+             * Objects.requireNonNull() déclenche une NullPointerException si listFiles() renvoie null.
+             * Cela permet d’éviter d’avoir une boucle sur null, ce qui provoquerait une erreur.
+             */
+            for (File file : Objects.requireNonNull(folder.listFiles())) {
+                if (file.isFile()) {
+                    String date = extractDateFromFileName(file.getName());
+                    if (date != null) {
+                        fileDates.add(date);
+                    }
+                }
+            }
+            //  Générer les 10 dernières dates
+            List<String> missingDates = new ArrayList<>();
+            Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.DAY_OF_YEAR, -1);
+            SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern);
+            for (int i = 0; i < days; i++) {
+                String dateString = dateFormat.format(calendar.getTime());
+                if (!fileDates.contains(dateString)) {
+                    missingDates.add(dateString);
+                }
+                calendar.add(Calendar.DAY_OF_YEAR, -1); // Reculer d'un jour
+            }
+
+            return missingDates;
+        }
 
         @Override
         public void execute(JobExecutionContext context) {
             try {
-                List<Codification> crmData = List.of();
+                /*LocalDateTime currentDateTime =LocalDateTime.now();
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yyyy");
+                String date = currentDateTime.format(formatter);
+                * */
+                List<CaseCrm> crmData = List.of();
                 List<Action> vueData= List.of();
 
-                if(crmFromCsv==true) {
-                    crmData = readCSVCrm(inputPathCrm);
+                List<String> missingDates = findMissingDates(outputPath, Integer.valueOf(nbJours));
+                System.out.println("missingDates"+missingDates);
+                for(String date: missingDates) {
+                    if(crmFromCsv==true) {
+
+                        crmData = readCSVCrm(inputPathCrm,date);
+                    }
+                    else  {
+                        System.out.println(
+                                "from db"
+                        );
+                        //crmData = codificationRepository.fetchDataCRM(requestCrm);
+
+                        System.out.println("crmdata"+crmData);                }
+
+
+                    if(vueFromCsv==true) {
+                        vueData = readCSVVue(inputPathVue,date);
+                    }
+                    else  {
+                        //vueData = actionRepository.fetchDataVue(requestVue);
+                    }
+
+                    List<Action> incoherentData = findIncoherences(vueData, crmData);
+
+                    writeCSVAndSend(outputPath, incoherentData,date);
+                    System.out.println("Incoherent data exported successfully to " + outputPath);
                 }
-                else  {
-                    System.out.println(
-                            "from db"
-                    );
-                    crmData = codificationRepository.fetchDataCRM(requestCrm);
 
-                    System.out.println("crmdata"+crmData);                }
-
-
-                if(vueFromCsv==true) {
-                    vueData = readCSVVue(inputPathVue);
-                }
-                else  {
-                    vueData = actionRepository.fetchDataVue(requestVue);
-                }
-
-                List<Action> incoherentData = findIncoherences(vueData, crmData);
-
-                LocalDateTime currentDateTime =LocalDateTime.now();
-
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
-                String date = currentDateTime.format(formatter);
-
-                writeCSVAndSend(outputPath, incoherentData,date);
-                System.out.println("Incoherent data exported successfully to " + outputPath);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (MessagingException e) {
@@ -379,5 +437,7 @@ public class DetectIncoherenceJob {
             }
 
         }
-    }
+
+
+}
 }

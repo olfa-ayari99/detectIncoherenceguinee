@@ -19,7 +19,7 @@ public class ActionRepository {
     private JdbcTemplate jdbcTemplateOne;
 
 
-    public List<Action> fetchDataVue(String sql) {
+  /*  public List<Action> fetchDataVue(String sql) {
         return jdbcTemplateOne.query(sql, new RowMapper<Action>() {
             @Override
             public Action mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -42,7 +42,7 @@ public class ActionRepository {
                 return action;
             }
         });
-    }
+    }*/
 
 
 }

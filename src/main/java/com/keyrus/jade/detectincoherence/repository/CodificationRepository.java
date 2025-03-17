@@ -1,7 +1,7 @@
 package com.keyrus.jade.detectincoherence.repository;
 
 
-import com.keyrus.jade.detectincoherence.dto.Codification;
+import com.keyrus.jade.detectincoherence.dto.CaseCrm;
 import com.keyrus.jade.detectincoherence.utils.ConstantsHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -18,21 +18,21 @@ public class CodificationRepository {
     @Autowired
     private JdbcTemplate jdbcTemplateTwo;
 
-    public List<Codification> fetchDataCRM(String sql) {
-        return jdbcTemplateTwo.query(sql, new RowMapper<Codification>() {
+   /* public List<CaseCrm> fetchDataCRM(String sql) {
+        return jdbcTemplateTwo.query(sql, new RowMapper<CaseCrm>() {
             @Override
-            public Codification mapRow(ResultSet rs, int rowNum) throws SQLException {
-                Codification codification = new Codification();
-                codification.setSujet(rs.getString(ConstantsHolder.CRMCASESUBJECT) != null
+            public CaseCrm mapRow(ResultSet rs, int rowNum) throws SQLException {
+                CaseCrm caseCrm = new CaseCrm();
+                caseCrm.setSujet(rs.getString(ConstantsHolder.CRMCASESUBJECT) != null
                         ? rs.getString(ConstantsHolder.CRMCASESUBJECT) : "");
-                codification.setCategorie(rs.getString(ConstantsHolder.CRMCASECATEGORY) != null
+                caseCrm.setCategorie(rs.getString(ConstantsHolder.CRMCASECATEGORY) != null
                         ? rs.getString(ConstantsHolder.CRMCASECATEGORY) : "");
-                codification.setMotif(rs.getString(ConstantsHolder.CRMCASEREASON) != null
+                caseCrm.setMotif(rs.getString(ConstantsHolder.CRMCASEREASON) != null
                         ? rs.getString(ConstantsHolder.CRMCASEREASON) : "");
-                return codification;
+                return caseCrm;
             }
         });
-    }
+    }*/
 
 
 
