@@ -202,4 +202,9 @@ public class Action {
     public String getKey() {
         return login + "|" + idInteraction + "|" + codification;
     }
+
+    public String getIdentifiant() {
+        return codeService + "|" + operation + "|" + sourceInterface;
+    }
+
 }
